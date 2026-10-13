@@ -1,0 +1,33 @@
+﻿# Dependencies
+node_modules/
+.npm/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Build Artifacts
+dist/
+build/
+*.tar
+*.tar.gz
+
+# Keys and Secrets
+*.pem
+*.key
+*.id_rsa
+id_rsa*
+*.vault_pass
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Terraform (for capstone)
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
