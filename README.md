@@ -9,24 +9,23 @@ A structured collection of production-grade containerization and configuration m
 
 ---
 
-## 📑 Projects Directory
+## 📂 Projects Directory
 
 | # | Project | Technology | Description | Status |
 | :---: | :--- | :---: | :--- | :---: |
-| **01** | [**Project 1: Multi-Stage Dockerfile Optimization**](./project-1-multistage-docker/) | Docker, Alpine, Node/TS | Production multi-stage image engineering, layer caching, non-root security, shrinking image from 900MB to 30MB. | `Completed ✅` |
-| **02** | [**Project 2: Storage & Volume Persistence**](./project-2-storage-volumes/) | Docker Volumes, PostgreSQL | Zero-data-loss database persistence, named volumes vs bind mounts, and container disaster recovery. | `Planned 📋` |
-| **03** | [**Project 3: Production Microservices with Docker Compose**](./project-3-compose-stack/) | Compose, Nginx, Redis | Multi-tier network isolation, custom bridge DNS, environment injection, and automated healthchecks. | `Planned 📋` |
-| **04** | [**Project 4: Ansible Agentless Configuration & Playbooks**](./project-4-ansible-playbooks/) | Ansible, Linux, SSH | Idempotent system configuration, package management, user hardening, and service management across fleets. | `Planned 📋` |
-| **05** | [**Project 5: Enterprise Ansible Roles & Secret Vault**](./project-5-ansible-roles-vault/) | Ansible Roles, Jinja2, Vault | Reusable role architecture, dynamic template generation, and AES-256 encrypted secret management. | `Planned 📋` |
-| **06** | [**Project 6: Capstone Automated Cloud Web Cluster**](./project-6-capstone-cluster/) | Terraform + Ansible + Docker | Terraform spins up 3 bare VMs → Ansible hardens OS & installs Docker → Docker runs load-balanced microservices! | `Planned 📋` |
+| **01** | [**Project 1: Multi-Stage Dockerfile Optimization**](./project-1-multistage-docker/) | Docker, Alpine, Node/TS | Production multi-stage image engineering, layer caching, non-root security, shrinking image from 1.64GB to 187MB. | `Completed ✅` |
+| **02** | [**Project 2: Storage & Volume Persistence**](./project-2-storage-volumes/) | Docker Volumes, PostgreSQL | Zero-data-loss database persistence, named volumes vs bind mounts, automated sidecar backups, and disaster recovery. | `Completed ✅` |
+| **03** | [**Project 3: Production Microservices with Docker Compose**](./project-3-compose-stack/) | Compose, Nginx, Redis | Multi-tier network isolation, custom bridge DNS, environment injection, and automated healthchecks. | `Planned ⏳` |
+| **04** | [**Project 4: Ansible Agentless Configuration & Playbooks**](./project-4-ansible-playbooks/) | Ansible, Linux, SSH | Idempotent system configuration, package management, user hardening, and service management across fleets. | `Planned ⏳` |
+| **05** | [**Project 5: Enterprise Ansible Roles & Secret Vault**](./project-5-ansible-roles-vault/) | Ansible Roles, Jinja2, Vault | Reusable role architecture, dynamic template generation, and AES-256 encrypted secret management. | `Planned ⏳` |
+| **06** | [**Project 6: Capstone Automated Cloud Web Cluster**](./project-6-capstone-cluster/) | Terraform + Ansible + Docker | Terraform spins up 3 bare VMs → Ansible hardens OS & installs Docker → Docker runs load-balanced microservices! | `Planned ⏳` |
 
 ---
 
-## 🔑 Key Engineering Competencies
+## 🎯 Key Engineering Competencies
 
-* **Minimal Image Engineering:** Multi-stage builds separating compilers from runtime artifacts, cutting image sizes by 95%+.
+* **Minimal Image Engineering:** Multi-stage builds separating compilers from runtime artifacts, cutting image sizes by 88%+.
 * **Container Security Hardening:** Enforcing non-root `USER`, read-only filesystems, `.dockerignore` hygiene, and vulnerability scanning.
 * **Storage Persistence:** Architecting stateful data with Docker Named Volumes for zero data loss during container upgrades.
 * **Idempotent Automation:** Writing Ansible playbooks that guarantee repeatable desired state without configuration drift.
 * **Full-Stack DevOps Marriage:** Unifying Terraform (IaC) + Ansible (Configuration) + Docker (Workloads) into an automated deployment pipeline.
-
