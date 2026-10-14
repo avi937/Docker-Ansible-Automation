@@ -1,0 +1,37 @@
+version: '3.8'
+
+# ==============================================================================
+# PROJECT 2: DOCKER PERSISTENT STORAGE & VOLUME LAB
+# Architecture: PostgreSQL 15 Alpine with Dedicated Named Volume & Bind Mount Init
+# ==============================================================================
+
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: postgres-production-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: enterprise_db
+      POSTGRES_USER: devops_admin
+      POSTGRES_PASSWORD: SuperSecureDevOpsPassword2026!
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      # 1. NAMED VOLUME: Persists database data independently of container lifecycle
+      - postgres_data:/var/lib/postgresql/data
+      
+      # 2. BIND MOUNT: Injects initialization SQL script from host into container (Read-Only)
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devops_admin -d enterprise_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  # Docker-managed volume stored on host filesystem (e.g. /var/lib/docker/volumes/)
+  postgres_data:
+    name: postgres_data_project2
+    driver: local
