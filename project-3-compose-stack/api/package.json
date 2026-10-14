@@ -1,0 +1,20 @@
+{
+  "name": "enterprise-microservice-api",
+  "version": "1.0.0",
+  "description": "Production Node.js microservice demonstrating Redis caching, healthchecks, and Docker DNS",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
