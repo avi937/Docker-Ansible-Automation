@@ -1,0 +1,24 @@
+﻿# Dependencies (Should be installed cleanly inside the container)
+node_modules
+npm-debug.log*
+
+# Git repository metadata
+.git
+.gitignore
+
+# Environment variables & secrets (CRITICAL: Never bake secrets into images)
+.env
+.env.*
+
+# Documentation & IDE configurations
+README.md
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Docker files & local build outputs
+Dockerfile*
+docker-compose*.yml
+dist
+build

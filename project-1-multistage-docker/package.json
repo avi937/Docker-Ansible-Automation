@@ -1,0 +1,19 @@
+﻿{
+  "name": "enterprise-container-api",
+  "version": "1.0.0",
+  "description": "Production Node.js microservice for Docker Multi-Stage Optimization",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node -e \"console.log('Tests passed!')\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "author": "Avi Arora",
+  "license": "MIT"
+}

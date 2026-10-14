@@ -1,0 +1,24 @@
+﻿# ========================================================
+# UN-OPTIMIZED SINGLE-STAGE DOCKERFILE
+# (Educational Baseline: Results in ~900 MB image footprint)
+# ========================================================
+
+# 1. Heavy Base Image: Full Debian OS + complete Node SDK (~1 GB)
+FROM node:18
+
+# 2. Set working directory inside container
+WORKDIR /app
+
+# 3. Cache-Busting Copy: Copies code and manifests together at the same time
+COPY . .
+
+# 4. Bloated Install: Downloads BOTH production and devDependencies (eslint, prettier)
+RUN npm install
+
+# 5. Security Flaw: No USER instruction specified! Runs dangerously as root (UID 0)
+
+# 6. Expose port documentation
+EXPOSE 3000
+
+# 7. Signal Flaw: Shell-form CMD creates a /bin/sh wrapper around Node (breaks SIGTERM)
+CMD npm start

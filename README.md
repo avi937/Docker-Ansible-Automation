@@ -13,7 +13,7 @@ A structured collection of production-grade containerization and configuration m
 
 | # | Project | Technology | Description | Status |
 | :---: | :--- | :---: | :--- | :---: |
-| **01** | [**Project 1: Multi-Stage Dockerfile Optimization**](./project-1-multistage-docker/) | Docker, Alpine, Node/TS | Production multi-stage image engineering, layer caching, non-root security, shrinking image from 900MB to 30MB. | `In Progress ⏳` |
+| **01** | [**Project 1: Multi-Stage Dockerfile Optimization**](./project-1-multistage-docker/) | Docker, Alpine, Node/TS | Production multi-stage image engineering, layer caching, non-root security, shrinking image from 900MB to 30MB. | `Completed ✅` |
 | **02** | [**Project 2: Storage & Volume Persistence**](./project-2-storage-volumes/) | Docker Volumes, PostgreSQL | Zero-data-loss database persistence, named volumes vs bind mounts, and container disaster recovery. | `Planned 📋` |
 | **03** | [**Project 3: Production Microservices with Docker Compose**](./project-3-compose-stack/) | Compose, Nginx, Redis | Multi-tier network isolation, custom bridge DNS, environment injection, and automated healthchecks. | `Planned 📋` |
 | **04** | [**Project 4: Ansible Agentless Configuration & Playbooks**](./project-4-ansible-playbooks/) | Ansible, Linux, SSH | Idempotent system configuration, package management, user hardening, and service management across fleets. | `Planned 📋` |
@@ -29,3 +29,4 @@ A structured collection of production-grade containerization and configuration m
 * **Storage Persistence:** Architecting stateful data with Docker Named Volumes for zero data loss during container upgrades.
 * **Idempotent Automation:** Writing Ansible playbooks that guarantee repeatable desired state without configuration drift.
 * **Full-Stack DevOps Marriage:** Unifying Terraform (IaC) + Ansible (Configuration) + Docker (Workloads) into an automated deployment pipeline.
+
